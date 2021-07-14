@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="guncelle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="618.0" style="-fx-background-color: sienna;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.biletsatisController">
+   <children>
+      <Button fx:id="filmsec" layoutX="281.0" layoutY="369.0" mnemonicParsing="false" onAction="#filmsec_click" prefHeight="42.0" prefWidth="85.0" style="-fx-background-color: cyan;" text="BİLETİ AL">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="adSoyadt" layoutX="14.0" layoutY="309.0" promptText="Ad Soyad" />
+      <TableView fx:id="biletTable" layoutX="173.0" layoutY="67.0" onMouseClicked="#tableview_mouseclicked" prefHeight="200.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="idc" prefWidth="65.60003662109375" text="Bilet No" />
+          <TableColumn fx:id="adSoyadc" prefWidth="92.00001525878906" text="Ad Soyad" />
+            <TableColumn fx:id="Filmc" prefWidth="80.79998779296875" text="Film" />
+            <TableColumn fx:id="sCol" prefWidth="60.79998779296875" text="Seans" />
+        </columns>
+      </TableView>
+      <Label layoutX="237.0" layoutY="1.0" text="BİLET SATIŞ" textFill="WHITE" underline="true">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Filmt" layoutX="176.0" layoutY="308.0" prefHeight="26.0" prefWidth="158.0" promptText="Film" />
+      <TextField fx:id="Seanst" layoutX="341.0" layoutY="309.0" promptText="Seans" />
+      <Button fx:id="sil" layoutX="479.0" layoutY="391.0" mnemonicParsing="false" onAction="#sil_click" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: red;" text="Seçilen Bileti Sil" textFill="WHITE" />
+      <Button fx:id="goster" layoutX="501.0" layoutY="167.0" mnemonicParsing="false" onAction="#goster_click" prefHeight="17.0" prefWidth="87.0" style="-fx-background-color: gray;" text="Listeyi Göster" textFill="WHITE" />
+      <Button fx:id="geri" layoutY="1.0" mnemonicParsing="false" onAction="#geri_click" text="Geri" />
+      <TextField fx:id="koltukt" layoutX="501.0" layoutY="309.0" prefHeight="26.0" prefWidth="108.0" promptText="Bilet No" />
+      <Button fx:id="duzenle" layoutX="501.0" layoutY="356.0" mnemonicParsing="false" onAction="#guncelle_click" style="-fx-background-color: yellow;" text="Düzenle" />
+      <Button fx:id="arabtn" layoutX="63.0" layoutY="141.0" mnemonicParsing="false" onAction="#arabtn_click" text="ara" />
+      <TextField fx:id="aratxt" layoutX="28.0" layoutY="108.0" onKeyPressed="#arakeypress" prefHeight="26.0" prefWidth="102.0" promptText="Ara" />
+      <Button fx:id="temizle" layoutX="44.0" layoutY="378.0" mnemonicParsing="false" onAction="#temizle_click" prefHeight="26.0" prefWidth="69.0" text="Temizle" />
+      <Label layoutX="1.0" layoutY="197.0" prefHeight="112.0" prefWidth="174.0" text="Bilet numarasının ilk hanesi seansı, sonraki haneleri ise koltuk numarasını gösterir. Örneğin bilet numarası 312 , seans 3 ve 12 numaralı koltuk anlamına gelmektedir." wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="188.0" text="!!!" />
+   </children>
+</AnchorPane>

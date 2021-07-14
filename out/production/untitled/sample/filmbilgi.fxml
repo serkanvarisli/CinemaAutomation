@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="872.0" style="-fx-background-color: #5e001f;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.filmbilgiController">
+   <children>
+      <Label fx:id="label" layoutX="325.0" layoutY="14.0" text="FİLM BİLGİLERİ" textAlignment="CENTER" textFill="#00e1d9">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="643.0" text="Oyuncular:" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextArea fx:id="oyunculart" focusTraversable="false" layoutX="29.0" layoutY="672.0" prefHeight="104.0" prefWidth="155.0" wrapText="true" />
+      <Button fx:id="goster" layoutX="727.0" layoutY="188.0" mnemonicParsing="false" onAction="#goster_click" prefHeight="62.0" prefWidth="130.0" style="-fx-background-color: #00e1d9;" text="Film Bilgilerini Göster" textFill="#5e001f" />
+      <TableView fx:id="film1Table" layoutX="219.0" layoutY="74.0" onMouseClicked="#tableview_mouseclicked" prefHeight="344.0" prefWidth="488.0">
+        <columns>
+          <TableColumn fx:id="idc" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="filmc" prefWidth="108.79998779296875" text="film" />
+            <TableColumn fx:id="bilgicol" prefWidth="118.39996337890625" text="bilgi" />
+            <TableColumn fx:id="konucol" minWidth="7.20001220703125" prefWidth="101.59991455078125" text="konu" />
+            <TableColumn fx:id="oyuncular" prefWidth="83.20001220703125" text="oyuncular" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filmt" focusTraversable="false" layoutX="28.0" layoutY="462.0" prefHeight="26.0" prefWidth="155.0" promptText="film" />
+      <TextField fx:id="idt" layoutX="22.0" layoutY="405.0" prefHeight="26.0" prefWidth="174.0" promptText="id" visible="false" />
+      <TextArea fx:id="bilgit" focusTraversable="false" layoutX="28.0" layoutY="530.0" prefHeight="104.0" prefWidth="155.0" promptText="bilgi" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="konut" focusTraversable="false" layoutX="247.0" layoutY="465.0" prefHeight="266.0" prefWidth="432.0" promptText="konu" wrapText="true" />
+      <Label text="Label" />
+      <Label layoutX="28.0" layoutY="435.0" text="Film:" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="502.0" text="Film Bilgisi:" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="418.0" layoutY="445.0" text="Filmin Konusu:" textFill="WHITE" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="geri" layoutY="-4.0" mnemonicParsing="false" onAction="#geri_click" text="Geri" underline="true" />
+      <Button fx:id="ekle" layoutX="734.0" layoutY="307.0" mnemonicParsing="false" onAction="#ekle_click" style="-fx-background-color: green;" text="Film Bilgilerini Ekle" textFill="WHITE" />
+      <Button fx:id="guncelle" layoutX="740.0" layoutY="353.0" mnemonicParsing="false" onAction="#guncelle_click" style="-fx-background-color: gray;" text="Bilgileri Güncelle" textFill="WHITE" />
+      <Button fx:id="sil" layoutX="756.0" layoutY="399.0" mnemonicParsing="false" onAction="#sil_click" style="-fx-background-color: red;" text="Seçileni Sil" textFill="WHITE" />
+      <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="167.0" layoutX="23.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/flat-design-concept-cinema-icon-with-long-sh-vector-3311155.jpg" />
+         </image></ImageView>
+      <Button fx:id="button1" layoutX="71.0" layoutY="283.0" mnemonicParsing="false" onAction="#Button1Action" prefHeight="26.0" prefWidth="38.0" text="Seç" />
+      <TextField fx:id="aratxt" layoutX="734.0" layoutY="569.0" onKeyPressed="#arakeypress" prefHeight="26.0" prefWidth="83.0" promptText="Ara" />
+      <Button fx:id="arabtn" layoutX="750.0" layoutY="608.0" mnemonicParsing="false" onAction="#arabtn_click" text="ara" />
+      <Button fx:id="temizle" layoutX="435.0" layoutY="743.0" mnemonicParsing="false" onAction="#temizle_click" text="Temizle" />
+   </children>
+</AnchorPane>

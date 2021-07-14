@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="622.0" prefWidth="891.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="219.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="626.0" fitWidth="341.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/sinema.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <BorderPane prefWidth="561.0" BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane prefHeight="622.0" prefWidth="468.0">
+               <center>
+                  <AnchorPane prefHeight="622.0" prefWidth="549.0" style="-fx-background-color: #5e001f;">
+                     <children>
+                        <Label layoutX="65.0" layoutY="14.0" prefHeight="50.0" prefWidth="411.0" text="SİNEMA OTOMASYONU" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="99.0" layoutY="64.0" prefHeight="42.0" prefWidth="310.0" text="YÖNETİCİ PANELİ" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="127.0" layoutY="154.0" text="GİRİŞ" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="381.0" layoutY="154.0" text="KAYIT" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="278.0" layoutY="155.0" orientation="VERTICAL" prefHeight="466.0" prefWidth="6.0" />
+                        <Separator layoutX="29.0" layoutY="198.0" prefHeight="6.0" prefWidth="485.0" />
+                        <TextField fx:id="kullaniciadi" focusTraversable="false" layoutX="33.0" layoutY="270.0" prefHeight="47.0" prefWidth="205.0" promptText="Kullanıcı Adı veya E-Posta">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="sifre" focusTraversable="false" layoutX="34.0" layoutY="353.0" prefHeight="47.0" prefWidth="204.0" promptText="Şifre">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Button fx:id="btn_login" layoutX="37.0" layoutY="474.0" mnemonicParsing="false" onAction="#btn_login_click" prefHeight="73.0" prefWidth="198.0" style="-fx-background-color: #00e1d9;" text="GİRİŞ YAP" textFill="#5e001f">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <TextField fx:id="eposta" focusTraversable="false" layoutX="311.0" layoutY="238.0" prefHeight="47.0" prefWidth="204.0" promptText="E-Posta veya Telefon No">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="adsoyad" focusTraversable="false" layoutX="311.0" layoutY="286.0" prefHeight="46.0" prefWidth="204.0" promptText="Adı Soyadı">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btn_kaydol" layoutX="311.0" layoutY="473.0" mnemonicParsing="false" onAction="#btn_kaydol_click" prefHeight="74.0" prefWidth="198.0" style="-fx-background-color: #00e1d9;" text="KAYDOL" textFill="#5e001f">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <TextField fx:id="kullaniciadi2" focusTraversable="false" layoutX="311.0" layoutY="333.0" prefHeight="46.0" prefWidth="203.0" promptText="Kullanıcı Adı">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="sifrekayit" focusTraversable="false" layoutX="311.0" layoutY="378.0" prefHeight="43.0" prefWidth="204.0" promptText="Şifre">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Label layoutX="33.0" layoutY="123.0" text="Lütfen film panelini görmek için giriş yapınız.." textFill="WHITE" />
+                        <Label fx:id="loginlable" layoutX="37.0" layoutY="431.0" text="   " textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</BorderPane>
